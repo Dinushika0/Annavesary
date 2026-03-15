@@ -1,0 +1,173 @@
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+text-align:center;
+}
+
+.body1{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+
+    /* Gradient background for the entire page */
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #ff9ac2);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+
+    min-height: 100vh; /* ensures gradient covers full page */
+}
+
+.body2 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-image: url('photo3.jpg'); /* replace with your file name */
+    background-size: cover;             /* cover entire screen */
+    background-position: center;        /* center the image */
+    background-repeat: no-repeat;       /* no repeat */
+    background-attachment: fixed; 
+}
+
+/* first page */
+
+.home{
+height:100vh;
+background:url("https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2") center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+.overlay{
+background:rgba(0,0,0,0.45);
+padding:50px;
+border-radius:20px;
+}
+
+h1{
+font-family:'Dancing Script',cursive;
+font-size:60px;
+}
+
+p{
+max-width:600px;
+font-size:20px;
+}
+
+button{
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:#ff4b7d;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+/* floating hearts */
+
+/* FULL PAGE HEART ANIMATION */
+
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+overflow:hidden;
+pointer-events:none;
+z-index:0;
+}
+
+.heart{
+position:absolute;
+bottom:-50px;
+color:#ff2e6a;
+font-size:20px;
+animation:floatUp linear infinite;
+opacity:0.9;
+}
+
+/* animation path */
+
+@keyframes floatUp{
+
+0%{
+transform:translateY(0) scale(0.8);
+opacity:1;
+}
+
+50%{
+transform:translateY(-50vh) scale(1.2);
+}
+
+100%{
+transform:translateY(-110vh) scale(1.5);
+opacity:0;
+}
+
+}
+
+/* Puzzle Page Background */
+
+body.puzzle-page{
+background: linear-gradient(135deg,#ff758c,#ff7eb3);
+height:100vh;
+margin:0;
+font-family:'Poppins',sans-serif;
+text-align:center;
+color:white;
+}
+
+/* Puzzle title */
+
+body.puzzle-page .title{
+margin-top:80px;
+font-size:40px;
+font-family:'Dancing Script',cursive;
+}
+
+/* puzzle */
+
+#puzzle{
+width:306px;
+margin:80px auto;
+padding:10px;
+background:white;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:3px;
+}
+
+.tile{
+width:100px;
+height:100px;
+background-image:url("https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2");
+background-size:300px 300px;
+cursor:pointer;
+}
+
+.empty{
+background:none;
+cursor:default;
+}
+
+
+/* titles */
+
+.title{
+margin-top:80px;
+font-size:40px;
+}
+
+video{
+width:70%;
+height:500px;
+max-width:900px;
+
+border-radius:20px;
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
+}
