@@ -114,3 +114,26 @@ window.location="video.html";
 }
 
 }
+function move(direction){
+
+let newX = player.x;
+let newY = player.y;
+
+if(direction==="up") newY--;
+if(direction==="down") newY++;
+if(direction==="left") newX--;
+if(direction==="right") newX++;
+
+if(newX>=0 && newX<10 && newY>=0 && newY<10 && maze[newY][newX]===0){
+player.x=newX;
+player.y=newY;
+}
+
+if(player.x===goal.x && player.y===goal.y){
+alert("I have a surprise for you! 🎁");
+window.location.href="video.html";
+}
+
+draw();
+
+}
